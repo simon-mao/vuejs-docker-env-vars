@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  vuejs-docker-env-vars:
+    image: simonmao.me/vuejs-docker-env-vars
+    container_name: vuejs-docker-env-vars
+    build:
+      context: .
+      args:
+        NODE_ENV: ${NODE_ENV}
+    restart: always
+    ports:
+      - "8080:80"
